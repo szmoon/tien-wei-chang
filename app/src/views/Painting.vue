@@ -1,15 +1,10 @@
 <template>
   <div>
     <div class="container has-text-left mb-5">
-      <h1 class="title is-3">Single Painting View</h1>
-      <p class="subtitle is-5">
-        Uses pre-generated tiles and static web hosting
-      </p>
+      <h1 class="title is-3">{{ $route.params.id }}</h1>
     </div>
     <!-- image viewer -->
-    <LeafletIiifViewer
-      infoJson="https://szmoon.github.io/iiif-exploration/static-tiles/B01-N01/info.json"
-    />
+    <LeafletIiifViewer :infoJson="infoJsonLink" />
     <!-- demo info -->
     <div class="container has-text-left mt-5">
       <h2 class="title is-5">About</h2>
@@ -26,6 +21,20 @@ export default {
   name: 'Painting',
   components: {
     LeafletIiifViewer
+  },
+  created() {
+    const artworkId = this.$route.params.id;
+    console.log('id', artworkId);
+  },
+  computed: {
+    infoJsonLink() {
+      const artworkId = this.$route.params.id;
+      return (
+        'https://szmoon.github.io/tien-wei-chang-images/images/' +
+        artworkId +
+        '/info.json'
+      );
+    }
   }
 };
 </script>

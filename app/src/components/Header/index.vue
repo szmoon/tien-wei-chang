@@ -12,9 +12,6 @@
         <router-link :to="basePath + 'gallery'" class="navbar-item">
           Gallery
         </router-link>
-        <router-link :to="basePath + 'painting'" class="navbar-item">
-          Painting
-        </router-link>
         <router-link :to="basePath + 'about'" class="navbar-item">
           About
         </router-link>

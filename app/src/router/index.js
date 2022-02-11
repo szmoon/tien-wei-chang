@@ -11,7 +11,7 @@ const routes = [
   { path: basePath, component: Home },
   { path: basePath + 'about', component: About },
   { path: basePath + 'gallery', component: Gallery },
-  { path: basePath + 'painting', component: Painting }
+  { name: 'painting', path: basePath + 'painting/:id', component: Painting }
 ];
 
 const router = createRouter({

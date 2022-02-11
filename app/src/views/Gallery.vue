@@ -15,13 +15,15 @@
         :key="art.id"
         class="column is-one-quarter-desktop is-half-tablet"
       >
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <img :src="art.thumbnail" alt="" />
-            </figure>
+        <router-link :to="{ name: 'painting', params: { id: art.id } }">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <img :src="art.thumbnail" alt="" />
+              </figure>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>

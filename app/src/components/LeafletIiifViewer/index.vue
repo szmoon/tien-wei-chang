@@ -6,7 +6,7 @@
 import 'leaflet/dist/leaflet.css';
 import 'leaflet';
 import 'leaflet-iiif';
-import $ from 'jquery';
+// import $ from 'jquery';
 const L = window.L;
 
 export default {
@@ -31,28 +31,29 @@ export default {
       });
 
       if (this.infoJson) {
-        L.tileLayer.iiif(this.infoJson).addTo(map);
+        L.tileLayer.iiif(this.infoJson, { fitBounds: true }).addTo(map);
       }
 
-      if (this.manifestUrl) {
-        const iiifLayers = {};
+      // if (this.manifestUrl) {
+      //   const iiifLayers = {};
 
-        // Grab a IIIF manifest
-        $.getJSON(this.manifestUrl, function (data) {
-          // For each image create a L.TileLayer.Iiif object and add that to an object literal for the layer control
-          $.each(data.sequences[0].canvases, function (_, val) {
-            iiifLayers[val.label] = L.tileLayer.iiif(
-              val.images[0].resource.service['@id'] + '/info.json'
-            );
-          });
+      //   // Grab a IIIF manifest
+      //   $.getJSON(this.manifestUrl, function(data) {
+      //     // For each image create a L.TileLayer.Iiif object and add that to an object literal for the layer control
+      //     $.each(data.sequences[0].canvases, function(_, val) {
+      //       iiifLayers[val.label] = L.tileLayer.iiif(
+      //         val.images[0].resource.service['@id'] + '/info.json',
+      //         { fitBounds: true }
+      //       );
+      //     });
 
-          // Add layers control to the map
-          L.control.layers(iiifLayers).addTo(map);
+      //     // Add layers control to the map
+      //     L.control.layers(iiifLayers).addTo(map);
 
-          // Access the first iiif object and add it to the map
-          iiifLayers[Object.keys(iiifLayers)[0]].addTo(map);
-        });
-      }
+      //     // Access the first iiif object and add it to the map
+      //     iiifLayers[Object.keys(iiifLayers)[0]].addTo(map);
+      //   });
+      // }
     }
   }
 };
@@ -60,6 +61,6 @@ export default {
 
 <style scoped>
 #map {
-  height: 500px;
+  height: 800px;
 }
 </style>
