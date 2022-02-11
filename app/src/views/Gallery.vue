@@ -8,13 +8,61 @@
         </p>
       </div>
     </div>
+    <!-- gallery -->
+    <div class="columns is-multiline">
+      <div
+        v-for="art in allArtwork"
+        :key="art.id"
+        class="column is-one-quarter-desktop is-half-tablet"
+      >
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img :src="art.thumbnail" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import $ from 'jquery';
+import { infoJsonLinks } from '../../iiif-images';
+
 export default {
   name: 'About',
-  components: {}
+  data() {
+    return { allArtwork: [] };
+  },
+  components: {},
+  mounted() {
+    infoJsonLinks.forEach(infoJson => {
+      $.getJSON(infoJson, data => {
+        const artworkData = {
+          id: this.getShortId(data),
+          thumbnail: this.getThumbnail(data)
+        };
+        this.allArtwork.push(artworkData);
+      });
+    });
+  },
+  methods: {
+    getShortId(infoJsonData) {
+      const fullId = infoJsonData['@id'];
+      const idParts = fullId.split('/');
+      return idParts[idParts.length - 1];
+    },
+    getThumbnail(infoJsonData) {
+      const width = infoJsonData.sizes[2].width;
+      const fullId = infoJsonData['@id'];
+
+      const thumbnailUrl = fullId + '/full/' + width + ',/0/default.jpg';
+
+      return thumbnailUrl;
+    }
+  }
 };
 </script>
 
