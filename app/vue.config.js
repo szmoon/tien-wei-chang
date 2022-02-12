@@ -1,5 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/iiif-exploration/'
-    : '/'
-}
+  publicPath: process.env.NODE_ENV === 'production' ? '/tien-wei-chang/' : '/'
+};

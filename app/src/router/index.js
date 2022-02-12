@@ -6,7 +6,7 @@ import Life from '../views/Life';
 import Painting from '../views/Painting';
 
 const env = process.env.NODE_ENV;
-export const basePath = env === 'production' ? '/iiif-exploration/' : '/';
+export const basePath = env === 'production' ? '/tien-wei-chang/' : '/';
 
 const routes = [
   { name: 'home', path: basePath, component: Home },
