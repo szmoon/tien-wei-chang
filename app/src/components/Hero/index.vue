@@ -7,7 +7,7 @@
           <!-- <div class="container"> -->
           <div class="navbar-brand">
             <a class="navbar-item">
-              <p class="title">張天威 | Tien-Wei Chang</p>
+              <p class="title site-title">張天威 | Tien-Wei Chang</p>
             </a>
             <span class="navbar-burger" data-target="navbarMenuHeroA">
               <span></span>
@@ -15,6 +15,7 @@
               <span></span>
             </span>
           </div>
+          <!-- Todo: generate these with config.json-->
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
               <router-link
@@ -54,7 +55,7 @@
       <div :class="heroFootClass">
         <div class="heading-container">
           <p class="title is-4">
-            {{ heading }}
+            {{ subHeadingText }}
           </p>
         </div>
       </div>
@@ -63,18 +64,33 @@
 </template>
 
 <script>
+import config from '../../config.json';
+
 export default {
   name: 'Hero',
   components: {},
-  props: {
-    heading: {
-      type: String,
-      required: true
-    }
+  props: {},
+  data() {
+    return {
+      config
+    };
   },
   computed: {
+    subHeadingText() {
+      const pages = config.pages;
+      const page = pages.filter(page => {
+        return page.routeName === this.routeName;
+      });
+      if (page.length) {
+        return page[0].heroSubheading;
+      }
+      return '';
+    },
     isHomepage() {
-      return this.$route.name === 'home';
+      return this.routeName === 'home';
+    },
+    routeName() {
+      return this.$route.name;
     },
     heroClass() {
       if (this.isHomepage) {
@@ -110,6 +126,14 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  .site-title {
+    font-size: $size-5;
+    @include from($tablet) {
+      font-size: $size-3;
+
+      justify-content: center;
+    }
+  }
 }
 
 .hero-bg-image {

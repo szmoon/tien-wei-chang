@@ -2,6 +2,7 @@
   <div>
     <div class="container has-text-left mb-5">
       <h1 class="title is-3">{{ $route.params.id }}</h1>
+      <!-- Todo: Add back to colleciton button -->
     </div>
     <!-- image viewer -->
     <LeafletIiifViewer :infoJson="infoJsonLink" />

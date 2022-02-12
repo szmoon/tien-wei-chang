@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero heading="About Chang-Tien Wei's life" />
+    <!-- <Hero heading="About Chang-Tien Wei's life" /> -->
     <!-- <div class="container has-text-left mb-5">
       <div class="container">
         <h1 class="title is-3">Life</h1>
@@ -13,11 +13,9 @@
 </template>
 
 <script>
-import Hero from '../components/Hero';
-
 export default {
   name: 'Life',
-  components: { Hero }
+  components: {}
 };
 </script>
 

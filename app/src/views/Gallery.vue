@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Hero heading="A collection of paintings by Tien-Wei Chang" />
     <!-- <div class="container has-text-left mb-5">
       <div class="container">
         <h1 class="title is-3">Gallery</h1>
@@ -32,7 +31,6 @@
 
 <script>
 import $ from 'jquery';
-import Hero from '../components/Hero';
 import { infoJsonLinks } from '../../iiif-images';
 
 export default {
@@ -40,7 +38,7 @@ export default {
   data() {
     return { allArtwork: [] };
   },
-  components: { Hero },
+  components: {},
   mounted() {
     infoJsonLinks.forEach(infoJson => {
       $.getJSON(infoJson, data => {

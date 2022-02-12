@@ -1,15 +1,7 @@
 <template>
   <div>
-    <Hero
-      :with-background-image="true"
-      heading="The artwork of renowned artist, Tien-Wei Chang"
-    />
     <!-- <h1 class="title is-3">The Artwork of Tien-Wei Chang</h1> -->
     <div class="columns">
-      <div class="column is-one-half">
-        <img src="../assets/images/chang-tien-wei-1.jpeg" />
-      </div>
-
       <div class="column">
         <div class="box has-text-left">
           <p class="title is-5">Flexible column</p>
@@ -21,24 +13,18 @@
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt.
           </p>
+          <p class="subtitle">
+            Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+            magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
         </div>
       </div>
-    </div>
-    <!-- <div class="container has-text-left mb-5"> -->
-    <!-- site intro -->
-    <!-- <div class="container box">
+
+      <div class="column is-one-half">
         <img src="../assets/images/chang-tien-wei-1.jpeg" />
-        <h1 class="title is-3">The Artwork of Tien-Wei Chang</h1>
-        <p class="subtitle is-5">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt.
-        </p>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 

@@ -1,24 +1,25 @@
 <template>
   <div id="app">
-    <!-- <Header /> -->
+    <Hero
+      :with-background-image="true"
+      heading="The artwork of renowned artist, Tien-Wei Chang"
+    />
 
-    <!-- <div class="page-content"> -->
-    <!-- <div class="container is-max-desktop"> -->
-    <router-view />
-    <!-- </div> -->
-    <!-- </div> -->
+    <div class="page-content ">
+      <div class="container is-max-widescreen">
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Home from './views/Home.vue';
-// import Header from './components/Header';
+import Hero from './components/Hero';
 
 export default {
   name: 'App',
   components: {
-    Home
-    // Header
+    Hero
   }
 };
 </script>
@@ -27,6 +28,7 @@ export default {
 @import '@/assets/main.scss';
 body {
   min-height: 100%;
+  min-width: 100vw;
 }
 
 #app {
@@ -36,37 +38,38 @@ body {
   color: #2c3e50;
   /* min-height: 100vh; */
   height: 100%;
+  // width: 100vw;
   background-color: $bgcolor-white;
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
 }
 
-// .page-content {
-//   height: 100%;
-//   padding: 50px;
+.page-content {
+  height: 100%;
+  padding: 80px 0;
 
-//   h2 {
-//     margin-top: 35px !important;
-//     margin-bottom: 15px !important;
-//   }
-//   p {
-//     margin-bottom: 15px;
-//     font-size: 20px;
-//   }
+  h2 {
+    margin-top: 35px !important;
+    margin-bottom: 15px !important;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
 
-//   ul {
-//     list-style-type: circle;
-//   }
+  ul {
+    list-style-type: circle;
+  }
 
-//   ol,
-//   ul {
-//     font-size: 20px;
-//     margin-bottom: 35px;
-//     margin-left: 35px;
-//     li {
-//       margin-top: 15px;
-//     }
-//   }
-// }
+  ol,
+  ul {
+    font-size: 20px;
+    margin-bottom: 35px;
+    margin-left: 35px;
+    li {
+      margin-top: 15px;
+    }
+  }
+}
 </style>

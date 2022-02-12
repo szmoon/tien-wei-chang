@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "routeName": "home",
+      "path": "",
+      "heroLinkText": "Main",
+      "heroSubheading": "The artwork of renowned artist, Tien-Wei Chang"
+    },
+    {
+      "routeName": "gallery",
+      "path": "gallery",
+      "heroLinkText": "Gallery",
+      "heroSubheading": "A collection of paintings by Tien-Wei Chang"
+    },
+    {
+      "routeName": "about",
+      "path": "about",
+      "heroLinkText": "About",
+      "heroSubheading": "About this collection of paintings"
+    },
+    {
+      "routeName": "life",
+      "path": "life",
+      "heroLinkText": "Life",
+      "heroSubheading": "About Chang-Tien Wei's life"
+    }
+  ]
+}
