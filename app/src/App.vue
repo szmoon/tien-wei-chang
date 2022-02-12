@@ -10,16 +10,20 @@
         <router-view />
       </div>
     </div>
+
+    <Footer />
   </div>
 </template>
 
 <script>
 import Hero from './components/Hero';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
-    Hero
+    Hero,
+    Footer
   }
 };
 </script>
@@ -36,18 +40,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   height: 100%;
-  // width: 100vw;
   background-color: $bgcolor-white;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .page-content {
   height: 100%;
-  padding: 80px 0;
+  padding: 80px 0 150px 0;
 
   h2 {
     margin-top: 35px !important;
