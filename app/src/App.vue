@@ -50,14 +50,15 @@ body {
 
 .page-content {
   height: 100%;
-  padding: 80px 0 150px 0;
+  padding: 25px 0 150px 0;
+  flex-grow: 1;
 
   h2 {
-    margin-top: 35px !important;
+    // margin-top: 35px !important;
     margin-bottom: 15px !important;
   }
   p {
-    margin-bottom: 15px;
+    margin-bottom: 25px !important;
     font-size: 20px;
   }
 

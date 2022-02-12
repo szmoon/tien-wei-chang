@@ -1,9 +1,13 @@
 <template>
   <div>
     <!-- <h1 class="title is-3">The Artwork of Tien-Wei Chang</h1> -->
-    <div class="columns">
+    <div class="columns is-vcentered mt-5">
+      <div class="column is-one-half">
+        <img src="../assets/images/chang-tien-wei-1.jpeg" />
+      </div>
+
       <div class="column">
-        <div class="box has-text-left">
+        <div class="is-primary-light has-text-left">
           <p class="title is-5">Flexible column</p>
           <p class="subtitle">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -13,17 +17,33 @@
             aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
             eos qui ratione voluptatem sequi nesciunt.
           </p>
-          <p class="subtitle">
-            Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-            magni dolores eos qui ratione voluptatem sequi nesciunt.
-          </p>
         </div>
       </div>
+    </div>
 
-      <div class="column is-one-half">
-        <img src="../assets/images/chang-tien-wei-1.jpeg" />
+    <div class="mt-6">
+      <div class="box has-text-left">
+        <p class="subtitle">
+          Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+          vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+          sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+          eos qui ratione voluptatem sequi nesciunt.
+        </p>
+        <p class="subtitle">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt.
+        </p>
       </div>
+    </div>
+
+    <div class="mt-6">
+      <router-link :to="{ name: 'gallery' }">
+        <button class="button is-primary is-large">View the Collection</button>
+      </router-link>
     </div>
   </div>
 </template>

@@ -16,13 +16,13 @@
       "routeName": "about",
       "path": "about",
       "heroLinkText": "About",
-      "heroSubheading": "About this collection of paintings"
+      "heroSubheading": "About this collection"
     },
     {
       "routeName": "life",
       "path": "life",
       "heroLinkText": "Life",
-      "heroSubheading": "About Chang-Tien Wei's life"
+      "heroSubheading": "Life & History"
     }
   ]
 }

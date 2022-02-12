@@ -9,7 +9,7 @@
       </div>
     </div> -->
     <!-- gallery -->
-    <div class="columns is-multiline">
+    <div class="columns is-multiline mt-5">
       <div
         v-for="art in allArtwork"
         :key="art.id"

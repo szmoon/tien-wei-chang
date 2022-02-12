@@ -54,9 +54,9 @@
       <!-- Hero footer: will stick at the bottom -->
       <div :class="heroFootClass">
         <div class="heading-container">
-          <p class="title is-4">
+          <h1 class="title is-4">
             {{ subHeadingText }}
-          </p>
+          </h1>
         </div>
       </div>
     </section>

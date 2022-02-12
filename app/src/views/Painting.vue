@@ -1,8 +1,13 @@
 <template>
   <div>
+    <!-- Todo: use fontawesome here? https://bulma.io/documentation/elements/button/ -->
     <div class="container has-text-left mb-5">
-      <h1 class="title is-3">{{ $route.params.id }}</h1>
-      <!-- Todo: Add back to colleciton button -->
+      <button class="button is-primary is-outlined is-small">
+        <!-- change this to last page in history, once pagination is added? -->
+        <router-link :to="{ name: 'gallery' }">
+          <span>&lt; Back to Collection</span>
+        </router-link>
+      </button>
     </div>
     <!-- image viewer -->
     <LeafletIiifViewer :infoJson="infoJsonLink" />
