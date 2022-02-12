@@ -8,12 +8,17 @@
 
     <div class="navbar-menu">
       <div class="navbar-end">
-        <router-link :to="basePath" class="navbar-item">Main</router-link>
-        <router-link :to="basePath + 'gallery'" class="navbar-item">
-          Gallery
+        <router-link :to="{ name: 'home' }" class="navbar-item"
+          >Main</router-link
+        >
+        <router-link :to="{ name: 'gallery' }" class="navbar-item">
+          Collection
         </router-link>
-        <router-link :to="basePath + 'about'" class="navbar-item">
+        <router-link :to="{ name: 'about' }" class="navbar-item">
           About
+        </router-link>
+        <router-link :to="{ name: 'life' }" class="navbar-item">
+          Life
         </router-link>
       </div>
     </div>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Hero heading="About this collection of paintings" />
+    <Hero heading="About Chang-Tien Wei's life" />
     <!-- <div class="container has-text-left mb-5">
       <div class="container">
-        <h1 class="title is-3">About</h1>
+        <h1 class="title is-3">Life</h1>
         <p class="subtitle is-5">
-          History, and about the collection
+          Life story
         </p>
-      </div> -->
-    <!-- </div> -->
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -16,7 +16,7 @@
 import Hero from '../components/Hero';
 
 export default {
-  name: 'About',
+  name: 'Life',
   components: { Hero }
 };
 </script>

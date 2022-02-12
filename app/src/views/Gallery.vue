@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="container has-text-left mb-5">
+    <Hero heading="A collection of paintings by Tien-Wei Chang" />
+    <!-- <div class="container has-text-left mb-5">
       <div class="container">
         <h1 class="title is-3">Gallery</h1>
         <p class="subtitle is-5">
           all paintings
         </p>
       </div>
-    </div>
+    </div> -->
     <!-- gallery -->
     <div class="columns is-multiline">
       <div
@@ -31,6 +32,7 @@
 
 <script>
 import $ from 'jquery';
+import Hero from '../components/Hero';
 import { infoJsonLinks } from '../../iiif-images';
 
 export default {
@@ -38,7 +40,7 @@ export default {
   data() {
     return { allArtwork: [] };
   },
-  components: {},
+  components: { Hero },
   mounted() {
     infoJsonLinks.forEach(infoJson => {
       $.getJSON(infoJson, data => {
